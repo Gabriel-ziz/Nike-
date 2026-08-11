@@ -1,548 +1,1392 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAINSTREET RECORDS | A Revolução do Trap Nacional</title>
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@700;900&family=Roboto:wght@400;700&family=Rajdhani:wght@600&family=Montserrat:wght@500;900&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="styles.css">
+
+    <title>NIKE — Air Force 1 | The Future Is Now</title>
+
+    <meta
+        name="description"
+        content="Projeto acadêmico de análise da Nike e do Air Force 1, explorando produto, custos, preço e experiência de marca."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
-    <header class="main-header" role="banner">
-        <div class="container header-content">
-           <a href="#" class="logo">
-    <img src="./logo-mainstreet.png" alt="Mainstreet Records Logo" class="logo-img">
-    
-    <span class="logo-title">MAINSTREET</span></a>
 
-            <nav class="main-nav" role="navigation">
-                <button class="nav-toggle" aria-controls="main-menu" aria-expanded="false" title="Menu de Navegação">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul class="nav-menu" id="main-menu" role="menu">
-                    <li role="presentation"><a href="#home" role="menuitem">Início</a></li>
-                    <li role="presentation"><a href="#portfolio" role="menuitem">Lançamentos</a></li>
-                    <li role="presentation"><a href="#artistas" role="menuitem">Artistas</a></li>
-                    <li role="presentation"><a href="#booking" role="menuitem">Booking</a></li>
-                    <li role="presentation"><a href="#spotify" role="menuitem">Playlist</a></li> 
-                    <li role="presentation"><a href="#servicos" role="menuitem">Serviços Pro</a></li>
-                    <li role="presentation"><a href="#contato" role="menuitem" class="btn-cta">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<!-- =========================================================
+     LOADING
+========================================================= -->
 
-    <main id="main-content" role="main">
-        <section id="home" class="hero-section" aria-labelledby="hero-heading">
-            <div class="hero-content container">
-                <h2 id="hero-heading" class="headline-title animate-in">A Revolução do Trap Nacional.</h2>
-                <p class="subtitle animate-in" data-delay="0.2s">Da rua para o mundo: batidas que marcam, vozes que inspiram.</p>
-                <div class="hero-actions animate-in" data-delay="0.4s">
-                    <a href="#portfolio" class="btn-primary large"><i class="fas fa-compact-disc"></i> Ver Lançamentos</a>
-                    <button class="btn-secondary play-all-btn"><i class="fas fa-headphones"></i> Ouvir Destaques</button>
-                </div>
-            </div>
-            <div class="sound-wave-visualizer"></div>
-        </section>
+<div id="loader">
 
-        <section id="sobre" class="about-section container">
-            <h2 class="section-title fade-up">Nossa História em Números</h2>
-            <div class="stats-grid">
-                <div class="stat-item fade-up" data-target="15000">
-                    <i class="fas fa-chart-line"></i>
-                    <span class="stat-number" data-count="0" id="stat-1">0</span>
-                    <p>Faixas Masterizadas</p>
-                </div>
-                <div class="stat-item fade-up" data-target="250" data-delay="0.1s">
-                    <i class="fas fa-award"></i>
-                    <span class="stat-number" data-count="0" id="stat-2">0</span>
-                    <p>Artistas Agenciados</p>
-                </div>
-                <div class="stat-item fade-up" data-target="50" data-delay="0.2s">
-                    <i class="fas fa-globe"></i>
-                    <span class="stat-number" data-count="0" id="stat-3">0</span>
-                    <p>Prêmios Ganhos</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio" class="portfolio-section" aria-labelledby="portfolio-title">
-            <div class="container">
-                <h2 id="portfolio-title" class="section-title fade-up">Lançamentos Quentes</h2>
-                <p class="fade-up" style="margin-bottom: var(--spacing-lg);">Confira as últimas faixas que estão dominando as paradas.</p>
-                <div class="tracks-grid" id="tracks-container">
-                    <div class="track-card card-base fade-up" data-track-id="1">
-                        <img src="./unnamed.jpg" alt="Capa Cyber Rush">
-                        <button class="play-btn" data-id="1" aria-label="Tocar Cyber Rush"><i class="fas fa-play"></i></button>
-                        <div class="track-card-info">
-                            <h3>Modo Prime</h3>
-                            <p class="text-dim">Artista: Chefin</p>
-                        </div>
-                    </div>
-                    <div class="track-card card-base fade-up" data-track-id="2" style="transition-delay: 0.1s;">
-                        <img src="./unnamed (1).jpg" alt="Capa Ritmo Urbano">
-                        <button class="play-btn" data-id="2" aria-label="Tocar Ritmo Urbano"><i class="fas fa-play"></i></button>
-                        <div class="track-card-info">
-                            <h3>Freestyle Depois da Cadeia</h3>
-                            <p class="text-dim">Artista: Oruam</p>
-                        </div>
-                    </div>
-                    <div class="track-card card-base fade-up" data-track-id="3" style="transition-delay: 0.2s;">
-                        <img src="./unnamed (2).jpg" alt="Capa Eternal Voyage">
-                        <button class="play-btn" data-id="3" aria-label="Tocar Eternal Voyage"><i class="fas fa-play"></i></button>
-                        <div class="track-card-info">
-                            <h3>Adoro Essa Vida</h3>
-                            <p class="text-dim">Artista: Chefin</p>
-                        </div>
-                    </div>
-                    <div class="track-card card-base fade-up" data-track-id="4" style="transition-delay: 0.3s;">
-                        <img src="./unnamed (3).jpg" alt="Capa Hard Groove">
-                        <button class="play-btn" data-id="4" aria-label="Tocar Hard Groove"><i class="fas fa-play"></i></button>
-                        <div class="track-card-info">
-                            <h3>Van Cleef</h3>
-                            <p class="text-dim">Artista: Orochi</p>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="btn-primary load-more-btn fade-up" style="margin-top: 50px;"><i class="fas fa-ellipsis-h"></i> Ver Todos (50+)</a>
-            </div>
-        </section>
-
-        <section id="artistas" class="artists-spotlight-section">
-            <div class="container">
-                <h2 class="section-title fade-up">Nossos Talentos</h2>
-                <p class="fade-up" style="margin-bottom: var(--spacing-lg);">Conheça os artistas que estão moldando o futuro da música.</p>
-                <div class="artists-grid">
-                    <div class="artist-card card-base fade-up">
-                        <img src="./PL QUEST.webp" alt="Perfil do Artista Froid">
-                        <h3>PL QUEST</h3>
-                        <p class="text-dim">Rap/Trap | Rio de Janeiro</p>
-                        <a href="#" class="btn-secondary" style="margin-top: var(--spacing-sm);">Ver Perfil</a>
-                    </div>
-                    <div class="artist-card card-base fade-up" style="transition-delay: 0.1s;">
-                        <img src="./BIN.jpg" alt="Perfil do Artista Djonga">
-                        <h3>BIN</h3>
-                        <p class="text-dim">Rap/Trap | Rio de Janeiro</p>
-                        <a href="#" class="btn-secondary" style="margin-top: var(--spacing-sm);">Ver Perfil</a>
-                    </div>
-                    <div class="artist-card card-base fade-up" style="transition-delay: 0.2s;">
-                        <img src="./CHEFIN.webp" alt="Perfil do Artista Orochi">
-                        <h3>Chefin</h3>
-                        <p class="text-dim">Trap/Rap | Rio de Janeiro</p>
-                        <a href="#" class="btn-secondary" style="margin-top: var(--spacing-sm);">Ver Perfil</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="booking" class="booking-section">
-            <div class="container">
-                <h2 class="section-title fade-up">Booking de Artistas</h2>
-                <p class="fade-up" style="margin-bottom: var(--spacing-lg);">Leve o talento da Mainstreet Records para seu evento. Use as setas para navegar.</p>
-                
-                <div class="artists-grid" id="booking-artists-container">
-                    </div>
-
-                <div class="booking-navigation fade-up">
-                    <button id="prev-artist-btn" class="btn-secondary" aria-label="Artista anterior"><i class="fas fa-chevron-left"></i> Anterior</button>
-                    <button id="next-artist-btn" class="btn-secondary" aria-label="Próximo artista">Próximo <i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-        </section>
-        
-        <section id="spotify" class="spotify-section">
-            <div class="container">
-                <h2 class="section-title fade-up">A Nossa Frequência</h2>
-                <p class="fade-up" style="margin-bottom: var(--spacing-lg);">Siga a playlist oficial da Mainstreet no Spotify e fique por dentro do que há de melhor no Trap e Rap nacional.</p>
-                
-                <div class="spotify-embed fade-up">
-                   <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E4pbsK1obsEYl?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-                
-                <a href="https://open.spotify.com/playlist/37i9dQZF1E4pbsK1obsEYl?si=01Nhw43tSgKgTIUXxf40hg" target="_blank" class="btn-secondary fade-up" style="margin-top: var(--spacing-md);">
-                    <i class="fab fa-spotify"></i> Abrir no Spotify
-                </a>
-            </div>
-        </section>
-        <section id="servicos" class="services-section container">
-            <h2 class="section-title fade-up">Nossos Serviços Pro</h2>
-            <div class="service-list-grid">
-                <article class="service-item card-base fade-up">
-                    <i class="fas fa-headphones-alt"></i>
-                    <h3>Produção Executiva</h3>
-                    <p class="text-dim">Gerenciamento completo do projeto, desde o conceito criativo até a distribuição final, garantindo a visão artística.</p>
-                </article>
-                <article class="service-item card-base fade-up" style="transition-delay: 0.1s;">
-                    <i class="fas fa-sliders-h"></i>
-                    <h3>Mixagem Premium</h3>
-                    <p class="text-dim">Engineers premiados utilizando equipamentos analógicos e digitais de ponta para clareza, impacto e profundidade sonora.</p>
-                </article>
-                <article class="service-item card-base fade-up" style="transition-delay: 0.2s;">
-                    <i class="fas fa-drum-steelpan"></i>
-                    <h3>Masterização para Streaming</h3>
-                    <p class="text-dim">Otimização de volume e dinâmica para Spotify, Apple Music e Rádio, garantindo o melhor som em qualquer plataforma.</p>
-                </article>
-                <article class="service-item card-base fade-up" style="transition-delay: 0.3s;">
-                    <i class="fas fa-microphone"></i>
-                    <h3>Estúdios de Gravação</h3>
-                    <p class="text-dim">Espaços de alta tecnologia e isolamento acústico para sessões de gravação de voz e instrumentos com qualidade impecável.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="contato" class="contact-section">
-            <div class="container">
-                <h2 class="section-title fade-up">Fale Conosco</h2>
-                <p class="fade-up" style="margin-bottom: var(--spacing-md);">Entre em contato para parcerias, propostas ou dúvidas. Use o formulário detalhado abaixo.</p>
-                <form id="contact-form" class="contact-form fade-up">
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome ou nome da banda" required>
-
-                    <label for="email">Email Profissional:</label>
-                    <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
-
-                    <label for="tipo_projeto">Tipo de Projeto:</label>
-                    <select id="tipo_projeto" name="tipo_projeto" required>
-                        <option value="">Selecione...</option>
-                        <option value="producao">Produção Musical Completa</option>
-                        <option value="mixagem">Somente Mixagem</option>
-                        <option value="masterizacao">Somente Masterização</option>
-                        <option value="agenciamento">Proposta de Agenciamento</option>
-                        <option value="booking">Solicitação de Booking</option> 
-                    </select>
-
-                    <label for="mensagem">Mensagem / Escopo do Projeto (Mínimo 50 caracteres):</label>
-                    <textarea id="mensagem" name="mensagem" placeholder="Descreva brevemente o projeto e suas expectativas." required></textarea>
-
-                    <button type="submit" class="btn-primary">Enviar Proposta Detalhada</button>
-                    <p id="form-message" class="hidden"></p>
-                </form>
-            </div>
-        </section>
-
-    </main>
-
-    <div id="global-audio-player" class="player-bar hidden" role="region" aria-label="Reprodutor de Música Global">
-        <div class="player-info">
-            <h4 id="player-title">Nenhuma faixa carregada</h4>
-        </div>
-        <div class="controls">
-            <button id="prev-btn" aria-label="Faixa anterior"><i class="fas fa-backward"></i></button>
-            <button id="main-play-btn" aria-label="Tocar/Pausar"><i class="fas fa-play"></i></button>
-            <button id="next-btn" aria-label="Próxima faixa"><i class="fas fa-forward"></i></button>
-        </div>
-        <audio id="main-audio" src=""></audio>
-        <button id="close-player-btn" aria-label="Fechar Player"><i class="fas fa-times"></i></button>
+    <div class="loader-logo">
+        NIKE
     </div>
 
-    <footer class="main-footer">
-        <div class="container" style="text-align: center; padding: 30px 0;">
-            <p class="text-dim">© 2025 MAINSTREET RECORDS. Todos os direitos reservados. | Desenvolvido com Atitude Trap.</p>
-            <div class="social-links" style="margin-top: 20px;">
-                <a href="#" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            </div>
+    <div class="loader-line">
+        <span></span>
+    </div>
+
+    <p>JUST DO IT.</p>
+
+</div>
+
+
+
+<!-- =========================================================
+     CURSOR
+========================================================= -->
+
+<div class="cursor"></div>
+<div class="cursor-follow"></div>
+
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+    <a href="#inicio" class="logo">
+        NIKE<span>®</span>
+    </a>
+
+
+    <nav class="navigation">
+
+        <a href="#inicio">Início</a>
+        <a href="#historia">História</a>
+        <a href="#produto">Produto</a>
+        <a href="#custos">Custos</a>
+        <a href="#analise">Análise</a>
+
+    </nav>
+
+
+    <button class="menu-button" id="menuButton">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+</header>
+
+
+
+<!-- =========================================================
+     MENU MOBILE
+========================================================= -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <a href="#inicio">Início</a>
+    <a href="#historia">História</a>
+    <a href="#produto">Produto</a>
+    <a href="#custos">Custos</a>
+    <a href="#analise">Análise</a>
+
+</div>
+
+
+
+<main>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="inicio">
+
+
+    <div class="hero-background-text">
+
+        NIKE
+
+    </div>
+
+
+
+    <div class="hero-content reveal">
+
+
+        <div class="eyebrow">
+
+            <span class="red-dot"></span>
+
+            NIKE AIR FORCE 1
+
         </div>
-    </footer>
 
-    <script type="module">
-        /* ========================================================= */
-        /* 1. ESTRUTURA DE DADOS E VARIÁVEIS GLOBAIS */
-        /* ========================================================= */
-        const playlist = [
-            { id: 1, title: 'Modo Prime (Prod. Mainstreet)', artist: 'Chefin', src:'ytmp3free.cc_chefin-modo-prime-ft-racovi-e-surfista-prod-lb-unico-youtubemp3free.org.mp3' , cover: 'https://picsum.photos/300/300?random=2' },
-            { id: 2, title: 'Freestyle Depois da Cadeia', artist: 'Oruam', src: 'ytmp3free.cc_oruam-freestyle-depois-da-cadeia-prod-maurin-youtubemp3free.org.mp3', cover: '' },
-            { id: 3, title: 'Adoro Essa Vida', artist: 'Chefin', src: 'ytmp3free.cc_chefin-ft-mc-joaozinho-vt-mc-luuky-adoro-essa-vida-prod-rafinha-youtubemp3free.org.mp3', cover: 'https://picsum.photos/300/300?random=4' },
-            { id: 4, title: 'Van Cleef', artist: 'Orochi', src: 'ytmp3free.cc_orochi-van-cleef-ft-filipe-ret-prod-portugal-no-beat-youtubemp3free.org.mp3', cover: 'https://picsum.photos/300/300?random=5' },
-        ];
 
-        const artistsForBooking = [
-            { id: 1, name: 'Orochi', genre: 'Trap/Hip-Hop', city: 'Rio de Janeiro', img: 'https://mainstreetrecords.com.br/wp-content/uploads/2022/12/orochi-perfil.png' },
-            { id: 2, name: 'PL Quest', genre: 'Rap/Trap', city: 'Brasília', img: 'https://mainstreetrecords.com.br/wp-content/uploads/2022/12/plartista-1-1024x1024.jpg' },
-            { id: 3, name: 'BIN', genre: 'Rap/Poesia', city: 'Belo Horizonte', img: 'https://mainstreetrecords.com.br/wp-content/uploads/2022/12/binartista-2.jpg' },
-            { id: 4, name: 'Borges', genre: 'Trap', city: 'Salvador', img: 'https://mainstreetrecords.com.br/wp-content/uploads/2022/12/borges-perfil1.png' },
-            { id: 5, name: 'Poze do Rodo', genre: 'Funk/Trap', city: 'Rio de Janeiro', img: 'https://mainstreetrecords.com.br/wp-content/uploads/2022/12/poze-perfil.png' },
-            { id: 6, name: 'Oruam', genre: 'Trap/R&B', city: 'Rio de Janeiro', img: 'https://mainstreetrecords.com.br/wp-content/uploads/2022/12/oruam-perfil.png' },
-            { id: 7, name: 'Chefin', genre: 'Trap/Funk', city: 'Rio de Janeiro', img: 'https://mainstreetrecords.com.br/wp-content/uploads/2022/12/chefin1.png' },
-            { id: 8, name: 'Bielzin', genre: 'Rap/Trap', city: 'Rio de Janeiro', img: 'https://mainstreetrecords.com.br/wp-content/uploads/2022/12/bielzinartista-1.jpg' },
-        ];
-        
-        const DOMElements = {
-            audioPlayer: document.getElementById('global-audio-player'),
-            mainAudio: document.getElementById('main-audio'),
-            playerTitle: document.getElementById('player-title'),
-            playButtons: document.querySelectorAll('.play-btn'),
-            mainPlayBtn: document.getElementById('main-play-btn'),
-            contactForm: document.getElementById('contact-form'),
-            formMessage: document.getElementById('form-message'),
-            navToggle: document.querySelector('.nav-toggle'),
-            navMenu: document.getElementById('main-menu'),
-            statCounters: document.querySelectorAll('.stat-number'),
-            prevBtn: document.getElementById('prev-btn'),
-            nextBtn: document.getElementById('next-btn'),
-            closeBtn: document.getElementById('close-player-btn'),
-            bookingArtistsContainer: document.getElementById('booking-artists-container'),
-            prevArtistBtn: document.getElementById('prev-artist-btn'),
-            nextArtistBtn: document.getElementById('next-artist-btn'),
-            playAllBtn: document.querySelector('.play-all-btn'),
-        };
+        <h1>
 
-        let currentTrackIndex = -1;
-        let currentArtistPage = 0;
-        const artistsPerPage = 4;
+            O clássico
+            <span>que nunca</span>
+            sai de cena.
 
-        /* ========================================================= */
-        /* 2. MÓDULO DO PLAYER DE MÚSICA */
-        /* ========================================================= */
-        function loadTrack(index) {
-            const track = playlist[index];
-            if (!track) return;
+        </h1>
 
-            currentTrackIndex = index;
-            DOMElements.mainAudio.src = track.src;
-            DOMElements.playerTitle.textContent = `${track.title} - ${track.artist}`;
-            DOMElements.audioPlayer.classList.remove('hidden');
-        }
 
-        function playTrack() {
-            DOMElements.mainAudio.play();
-            DOMElements.mainPlayBtn.innerHTML = '<i class="fas fa-pause"></i>';
-        }
+        <p class="hero-description">
 
-        function pauseTrack() {
-            DOMElements.mainAudio.pause();
-            DOMElements.mainPlayBtn.innerHTML = '<i class="fas fa-play"></i>';
-        }
+            Mais do que um tênis. Um símbolo.
+            Descubra como design, cultura, produção,
+            estratégia e desejo transformaram o Air Force 1
+            em um dos maiores ícones da Nike.
 
-        function togglePlayPause(trackId) {
-            const index = playlist.findIndex(t => t.id === trackId);
-            
-            if (index === currentTrackIndex) {
-                if (DOMElements.mainAudio.paused) {
-                    playTrack();
-                } else {
-                    pauseTrack();
-                }
-            } else {
-                loadTrack(index);
-                playTrack();
-            }
-            updatePlayerUI(trackId);
-        }
+        </p>
 
-        function playNextTrack() {
-            let newIndex = (currentTrackIndex + 1) % playlist.length;
-            loadTrack(newIndex);
-            playTrack();
-        }
 
-        function playPrevTrack() {
-            let newIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
-            loadTrack(newIndex);
-            playTrack();
-        }
+        <div class="hero-buttons">
 
-        function updatePlayerUI(currentId) {
-            DOMElements.playButtons.forEach(btn => {
-                const id = parseInt(btn.dataset.id);
-                // Reset todos
-                btn.querySelector('i').className = 'fas fa-play';
+            <a href="#produto" class="button button-white">
 
-                // Atualiza o ativo
-                if (id === currentId && !DOMElements.mainAudio.paused) {
-                    btn.querySelector('i').className = 'fas fa-pause';
-                }
-            });
-        }
-        
-        function closePlayer() {
-            DOMElements.mainAudio.pause();
-            DOMElements.mainAudio.currentTime = 0;
-            DOMElements.audioPlayer.classList.add('hidden');
-            currentTrackIndex = -1;
-            updatePlayerUI(-1);
-        }
-        
-        /* ========================================================= */
-        /* 3. MÓDULO DE ANIMAÇÕES (CONTADORES) */
-        /* ========================================================= */
-        function initScrollAnimations() {
-            const observer = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        if (entry.target.classList.contains('stat-item')) {
-                            animateStatCount(entry.target.querySelector('.stat-number'), parseInt(entry.target.dataset.target));
-                        }
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.2 });
+                EXPLORAR PRODUTO
 
-            document.querySelectorAll('.stat-item').forEach(el => {
-                observer.observe(el);
-            });
-        }
-        
-        function animateStatCount(element, finalValue) {
-            const duration = 2000;
-            let start = 0;
-            const stepTime = 1;
-            
-            const step = Math.ceil(finalValue / (duration / stepTime));
+                <span>↗</span>
 
-            function counter() {
-                start += step;
-                if (start < finalValue) {
-                    element.textContent = start.toLocaleString('pt-BR');
-                    setTimeout(counter, stepTime);
-                } else {
-                    element.textContent = finalValue.toLocaleString('pt-BR');
-                }
-            }
-            counter();
-        }
-        
-        /* ========================================================= */
-        /* 4. MÓDULO DE FORMULÁRIO */
-        /* ========================================================= */
-        
-        function initFormLogic() {
-            DOMElements.contactForm.addEventListener('submit', function(event) {
-                event.preventDefault();
-                
-                const formData = new FormData(this);
-                const message = formData.get('mensagem');
-                
-                if (message.length < 50) {
-                    showFormMessage('A mensagem deve ter pelo menos 50 caracteres para detalhar o projeto.', 'error');
-                    return;
-                }
+            </a>
 
-                // Simulação de envio
-                console.log('Proposta enviada:', Object.fromEntries(formData));
-                showFormMessage('Proposta enviada com sucesso! Em breve entraremos em contato.', 'success');
-                
-                setTimeout(() => {
-                    DOMElements.contactForm.reset();
-                }, 1000);
-            });
-        }
-        
-        function showFormMessage(message, type) {
-            DOMElements.formMessage.textContent = message;
-            DOMElements.formMessage.className = `visible ${type}`;
-            
-            setTimeout(() => {
-                DOMElements.formMessage.classList.remove('visible');
-            }, 6000);
-        }
 
-        /* ========================================================= */
-        /* 5. MÓDULO DE BOOKING DE ARTISTAS (CARROSSEL) */
-        /* ========================================================= */
-        function renderArtists() {
-            DOMElements.bookingArtistsContainer.innerHTML = '';
-            const start = currentArtistPage * artistsPerPage;
-            const end = start + artistsPerPage;
-            const artistsToDisplay = artistsForBooking.slice(start, end);
+            <a href="#custos" class="button button-outline">
 
-            artistsToDisplay.forEach(artist => {
-                const artistCard = document.createElement('div');
-                artistCard.classList.add('artist-card', 'card-base', 'fade-up');
-                artistCard.innerHTML = `
-                    <img src="${artist.img}" alt="Perfil do Artista ${artist.name}">
-                    <h3>${artist.name}</h3>
-                    <p class="text-dim">${artist.genre} | ${artist.city}</p>
-                    <a href="#contato?booking=${artist.name}" class="btn-secondary" style="margin-top: var(--spacing-sm);">Contratar</a>
-                `;
-                // Como o fade-up foi desativado no CSS, não precisamos do is-visible
-                DOMElements.bookingArtistsContainer.appendChild(artistCard);
-            });
+                VER ANÁLISE
 
-            updateBookingNavButtons();
-        }
+            </a>
 
-        function updateBookingNavButtons() {
-            const totalPages = Math.ceil(artistsForBooking.length / artistsPerPage);
-            DOMElements.prevArtistBtn.disabled = currentArtistPage === 0;
-            DOMElements.nextArtistBtn.disabled = currentArtistPage >= totalPages - 1;
-        }
+        </div>
 
-        function goToNextArtistPage() {
-            const totalPages = Math.ceil(artistsForBooking.length / artistsPerPage);
-            if (currentArtistPage < totalPages - 1) {
-                currentArtistPage++;
-                renderArtists();
-            }
-        }
 
-        function goToPrevArtistPage() {
-            if (currentArtistPage > 0) {
-                currentArtistPage--;
-                renderArtists();
-            }
-        }
+        <div class="hero-numbers">
 
-        /* ========================================================= */
-        /* 6. INICIALIZAÇÃO GERAL E EVENT LISTENERS */
-        /* ========================================================= */
+            <div>
 
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log("MAINSTREET RECORDS: Sistema Carregado (JS). Tema Trap Ativado.");
-            
-            // 6.1 Inicializa módulos
-            initScrollAnimations();
-            initFormLogic();
-            renderArtists(); 
+                <strong class="counter" data-target="1982">
+                    0
+                </strong>
 
-            // 6.2 Listeners do Player
-            DOMElements.playButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const trackId = parseInt(button.dataset.id);
-                    togglePlayPause(trackId);
-                });
-            });
-            
-            DOMElements.playAllBtn.addEventListener('click', () => {
-                if (currentTrackIndex === -1 || DOMElements.mainAudio.paused) {
-                    togglePlayPause(playlist[0].id);
-                } else {
-                    pauseTrack();
-                }
-            });
+                <span>
+                    Ano de lançamento
+                </span>
 
-            DOMElements.mainPlayBtn.addEventListener('click', () => {
-                if (currentTrackIndex === -1 && playlist.length > 0) {
-                    togglePlayPause(playlist[0].id);
-                } else if (currentTrackIndex !== -1) {
-                    togglePlayPause(playlist[currentTrackIndex].id);
-                }
-            });
-            
-            DOMElements.mainAudio.addEventListener('pause', () => updatePlayerUI(playlist[currentTrackIndex]?.id || -1));
-            DOMElements.mainAudio.addEventListener('play', () => updatePlayerUI(playlist[currentTrackIndex]?.id || -1));
-            DOMElements.mainAudio.addEventListener('ended', playNextTrack);
-            DOMElements.nextBtn.addEventListener('click', playNextTrack);
-            DOMElements.prevBtn.addEventListener('click', playPrevTrack);
-            DOMElements.closeBtn.addEventListener('click', closePlayer);
-            
-            // 6.3 Listener do Menu Responsivo
-            DOMElements.navToggle.addEventListener('click', () => {
-                const isExpanded = DOMElements.navToggle.getAttribute('aria-expanded') === 'true';
-                DOMElements.navToggle.setAttribute('aria-expanded', !isExpanded);
-                DOMElements.navMenu.classList.toggle('active');
-            });
+            </div>
 
-            // 6.4 Listeners de Navegação de Artistas
-            DOMElements.prevArtistBtn.addEventListener('click', goToPrevArtistPage);
-            DOMElements.nextArtistBtn.addEventListener('click', goToNextArtistPage);
-        });
-    </script>
+
+            <div>
+
+                <strong>
+                    01
+                </strong>
+
+                <span>
+                    Ícone mundial
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    NIKE
+                </strong>
+
+                <span>
+                    Performance + cultura
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- PRODUTO -->
+
+    <div class="hero-product reveal">
+
+
+        <div class="product-orbit orbit-one"></div>
+        <div class="product-orbit orbit-two"></div>
+
+
+        <div class="red-glow"></div>
+
+
+        <div class="product-label">
+
+            <span>NIKE</span>
+
+            AIR FORCE 1
+
+        </div>
+
+
+        <img
+            src="assets/air-force-1.png"
+            alt="Nike Air Force 1"
+            class="air-force-image"
+            id="shoe"
+        >
+
+
+        <div class="floating-card">
+
+            <small>
+                MODELO ICÔNICO
+            </small>
+
+            <strong>
+                AIR FORCE 1
+            </strong>
+
+            <span>
+                Original • Atemporal • Versátil
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     MARQUEE
+========================================================= -->
+
+<section class="marquee">
+
+    <div class="marquee-track">
+
+        <span>JUST DO IT.</span>
+        <span>JUST DO IT.</span>
+        <span>JUST DO IT.</span>
+        <span>JUST DO IT.</span>
+        <span>JUST DO IT.</span>
+        <span>JUST DO IT.</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INTRODUÇÃO
+========================================================= -->
+
+<section class="intro section" id="historia">
+
+
+    <div class="section-number">
+        01
+    </div>
+
+
+    <div class="intro-grid">
+
+
+        <div class="section-title reveal">
+
+            <span class="mini-title">
+                A MARCA
+            </span>
+
+            <h2>
+
+                Não é apenas
+                <em>um</em> produto.
+
+            </h2>
+
+        </div>
+
+
+        <div class="intro-text reveal">
+
+            <p class="large-text">
+
+                A Nike construiu sua identidade combinando
+                esporte, inovação, cultura e comportamento.
+
+            </p>
+
+
+            <p>
+
+                O Air Force 1 representa perfeitamente essa
+                estratégia. Criado originalmente para o basquete,
+                o modelo ultrapassou as quadras e se transformou
+                em um fenômeno cultural.
+
+            </p>
+
+
+            <p>
+
+                Seu sucesso não depende somente da fabricação
+                de um tênis. Existe uma cadeia envolvendo
+                desenvolvimento, materiais, produção, transporte,
+                marketing, distribuição, impostos e posicionamento
+                de marca.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     TIMELINE
+========================================================= -->
+
+<section class="timeline-section section">
+
+
+    <div class="section-number">
+        02
+    </div>
+
+
+    <div class="section-heading reveal">
+
+        <span class="mini-title">
+            A EVOLUÇÃO
+        </span>
+
+        <h2>
+            De uma quadra
+            para o mundo.
+        </h2>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-item reveal">
+
+            <span class="timeline-year">
+                1982
+            </span>
+
+            <div>
+
+                <h3>
+                    O nascimento
+                </h3>
+
+                <p>
+                    O Air Force 1 chega ao mercado como
+                    um tênis de basquete inovador.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+            <span class="timeline-year">
+                1990s
+            </span>
+
+            <div>
+
+                <h3>
+                    A cultura urbana
+                </h3>
+
+                <p>
+                    O modelo passa a ganhar força fora
+                    das quadras e dentro da cultura streetwear.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+            <span class="timeline-year">
+                2000s
+            </span>
+
+            <div>
+
+                <h3>
+                    Um símbolo global
+                </h3>
+
+                <p>
+                    O Air Force 1 consolida sua posição
+                    como um dos modelos mais reconhecidos da Nike.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+            <span class="timeline-year">
+                HOJE
+            </span>
+
+            <div>
+
+                <h3>
+                    Um clássico vivo
+                </h3>
+
+                <p>
+                    Décadas depois, o modelo continua
+                    relevante, desejado e comercialmente forte.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PRODUTO
+========================================================= -->
+
+<section class="product-section section" id="produto">
+
+
+    <div class="section-number">
+        03
+    </div>
+
+
+    <div class="product-layout">
+
+
+        <div class="product-image-container reveal">
+
+            <div class="product-circle"></div>
+
+            <img
+                src="assets/air-force-1.png"
+                alt="Air Force 1"
+            >
+
+            <span class="vertical-text">
+                AIR FORCE 1
+            </span>
+
+        </div>
+
+
+
+        <div class="product-info reveal">
+
+
+            <span class="mini-title">
+                O PRODUTO
+            </span>
+
+
+            <h2>
+                AIR FORCE
+                <span>01.</span>
+            </h2>
+
+
+            <p class="product-description">
+
+                Um design reconhecível de longe.
+                Uma construção pensada para o uso diário.
+                Uma identidade que atravessa gerações.
+
+            </p>
+
+
+            <div class="features">
+
+
+                <div class="feature">
+
+                    <span class="feature-icon">
+                        01
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Design icônico
+                        </h3>
+
+                        <p>
+                            Silhueta reconhecível e identidade visual forte.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <span class="feature-icon">
+                        02
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Versatilidade
+                        </h3>
+
+                        <p>
+                            Desenvolvido para combinar com diferentes estilos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <span class="feature-icon">
+                        03
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Marca
+                        </h3>
+
+                        <p>
+                            O valor percebido vai muito além dos materiais.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CUSTOS
+========================================================= -->
+
+<section class="cost-section section" id="custos">
+
+
+    <div class="section-number">
+        04
+    </div>
+
+
+    <div class="section-heading reveal">
+
+        <span class="mini-title">
+            POR TRÁS DO PREÇO
+        </span>
+
+        <h2>
+            Quanto realmente
+            existe por trás de um produto?
+        </h2>
+
+        <p>
+            Uma análise ilustrativa da composição financeira
+            de uma venda. Os valores abaixo são utilizados
+            para fins acadêmicos e podem ser ajustados.
+        </p>
+
+    </div>
+
+
+
+    <div class="cost-dashboard">
+
+
+        <!-- INPUTS -->
+
+        <div class="cost-inputs reveal">
+
+
+            <div class="input-group">
+
+                <label>
+                    Custo de produção
+                </label>
+
+                <div class="input-wrapper">
+
+                    <span>
+                        R$
+                    </span>
+
+                    <input
+                        type="number"
+                        id="productionCost"
+                        value="250"
+                        min="0"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Logística
+                </label>
+
+                <div class="input-wrapper">
+
+                    <span>
+                        R$
+                    </span>
+
+                    <input
+                        type="number"
+                        id="logisticsCost"
+                        value="45"
+                        min="0"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Marketing
+                </label>
+
+                <div class="input-wrapper">
+
+                    <span>
+                        R$
+                    </span>
+
+                    <input
+                        type="number"
+                        id="marketingCost"
+                        value="60"
+                        min="0"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Outros custos
+                </label>
+
+                <div class="input-wrapper">
+
+                    <span>
+                        R$
+                    </span>
+
+                    <input
+                        type="number"
+                        id="otherCost"
+                        value="30"
+                        min="0"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Margem desejada
+                </label>
+
+                <div class="input-wrapper">
+
+                    <span>
+                        %
+                    </span>
+
+                    <input
+                        type="number"
+                        id="profitMargin"
+                        value="35"
+                        min="0"
+                        max="90"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="calculate-button"
+                id="calculateButton"
+            >
+
+                CALCULAR PREÇO
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- RESULTADO -->
+
+        <div class="cost-result reveal">
+
+
+            <div class="result-top">
+
+                <span>
+                    PREÇO ESTIMADO
+                </span>
+
+                <span class="result-status">
+                    ● SIMULAÇÃO
+                </span>
+
+            </div>
+
+
+            <div class="big-price">
+
+                <small>
+                    R$
+                </small>
+
+                <strong id="finalPrice">
+                    0,00
+                </strong>
+
+            </div>
+
+
+            <div class="result-divider"></div>
+
+
+            <div class="result-row">
+
+                <span>
+                    Custos totais
+                </span>
+
+                <strong id="totalCosts">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+
+            <div class="result-row">
+
+                <span>
+                    Lucro estimado
+                </span>
+
+                <strong id="estimatedProfit">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+
+            <div class="result-row">
+
+                <span>
+                    Margem
+                </span>
+
+                <strong id="displayMargin">
+                    0%
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- BARRAS -->
+
+    <div class="cost-bars reveal">
+
+
+        <div class="bar-item">
+
+            <div class="bar-header">
+
+                <span>
+                    Produção
+                </span>
+
+                <strong id="productionPercent">
+                    0%
+                </strong>
+
+            </div>
+
+            <div class="bar">
+                <span id="productionBar"></span>
+            </div>
+
+        </div>
+
+
+        <div class="bar-item">
+
+            <div class="bar-header">
+
+                <span>
+                    Logística
+                </span>
+
+                <strong id="logisticsPercent">
+                    0%
+                </strong>
+
+            </div>
+
+            <div class="bar">
+                <span id="logisticsBar"></span>
+            </div>
+
+        </div>
+
+
+        <div class="bar-item">
+
+            <div class="bar-header">
+
+                <span>
+                    Marketing
+                </span>
+
+                <strong id="marketingPercent">
+                    0%
+                </strong>
+
+            </div>
+
+            <div class="bar">
+                <span id="marketingBar"></span>
+            </div>
+
+        </div>
+
+
+        <div class="bar-item">
+
+            <div class="bar-header">
+
+                <span>
+                    Outros
+                </span>
+
+                <strong id="otherPercent">
+                    0%
+                </strong>
+
+            </div>
+
+            <div class="bar">
+                <span id="otherBar"></span>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     GRÁFICO
+========================================================= -->
+
+<section class="chart-section section" id="analise">
+
+
+    <div class="section-number">
+        05
+    </div>
+
+
+    <div class="chart-grid">
+
+
+        <div class="chart-info reveal">
+
+            <span class="mini-title">
+                VISÃO FINANCEIRA
+            </span>
+
+            <h2>
+                O preço conta
+                uma história.
+            </h2>
+
+            <p>
+
+                O consumidor enxerga apenas o valor final.
+                Por trás dele existe uma estrutura muito maior.
+
+            </p>
+
+
+            <div class="chart-highlights">
+
+
+                <div>
+
+                    <strong id="chartCost">
+                        R$ 0
+                    </strong>
+
+                    <span>
+                        Custos
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="chartProfit">
+                        R$ 0
+                    </strong>
+
+                    <span>
+                        Lucro
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="chartPrice">
+                        R$ 0
+                    </strong>
+
+                    <span>
+                        Venda
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="chart-container reveal">
+
+            <div class="chart">
+
+                <div
+                    class="chart-bar"
+                    id="chartCostBar"
+                >
+
+                    <span>
+                        CUSTOS
+                    </span>
+
+                    <strong>
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div
+                    class="chart-bar"
+                    id="chartProfitBar"
+                >
+
+                    <span>
+                        LUCRO
+                    </span>
+
+                    <strong>
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="chart-axis">
+
+                <span>
+                    COMPOSIÇÃO DO PREÇO
+                </span>
+
+                <span>
+                    100%
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CADEIA
+========================================================= -->
+
+<section class="chain-section section">
+
+
+    <div class="section-number">
+        06
+    </div>
+
+
+    <div class="section-heading reveal">
+
+        <span class="mini-title">
+            DA IDEIA AO CONSUMIDOR
+        </span>
+
+        <h2>
+            Uma jornada
+            muito maior.
+        </h2>
+
+    </div>
+
+
+    <div class="chain">
+
+
+        <div class="chain-item reveal">
+
+            <span>
+                01
+            </span>
+
+            <h3>
+                Design
+            </h3>
+
+            <p>
+                Conceito, pesquisa, desenvolvimento e identidade.
+            </p>
+
+        </div>
+
+
+        <div class="chain-line"></div>
+
+
+        <div class="chain-item reveal">
+
+            <span>
+                02
+            </span>
+
+            <h3>
+                Materiais
+            </h3>
+
+            <p>
+                Seleção e preparação dos componentes do produto.
+            </p>
+
+        </div>
+
+
+        <div class="chain-line"></div>
+
+
+        <div class="chain-item reveal">
+
+            <span>
+                03
+            </span>
+
+            <h3>
+                Produção
+            </h3>
+
+            <p>
+                Fabricação, controle e preparação para distribuição.
+            </p>
+
+        </div>
+
+
+        <div class="chain-line"></div>
+
+
+        <div class="chain-item reveal">
+
+            <span>
+                04
+            </span>
+
+            <h3>
+                Logística
+            </h3>
+
+            <p>
+                Transporte, armazenamento e distribuição.
+            </p>
+
+        </div>
+
+
+        <div class="chain-line"></div>
+
+
+        <div class="chain-item reveal">
+
+            <span>
+                05
+            </span>
+
+            <h3>
+                Consumidor
+            </h3>
+
+            <p>
+                O produto chega às mãos de quem escolheu a marca.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     VENDA / CTA
+========================================================= -->
+
+<section class="cta-section">
+
+
+    <div class="cta-background">
+        NIKE
+    </div>
+
+
+    <div class="cta-content reveal">
+
+        <span class="mini-title">
+            MAIS QUE UM TÊNIS
+        </span>
+
+
+        <h2>
+
+            O produto pode ser
+            comprado.
+
+            <span>
+                A marca é desejada.
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            É essa diferença que transforma um produto
+            em uma experiência e uma empresa em uma marca.
+
+        </p>
+
+
+        <a href="#inicio" class="button button-white">
+
+            VOLTAR AO TOPO
+
+            <span>
+                ↑
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+
+    <div class="footer-top">
+
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+                NIKE
+            </div>
+
+            <p>
+                JUST DO IT.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#inicio">
+                Início
+            </a>
+
+            <a href="#historia">
+                História
+            </a>
+
+            <a href="#produto">
+                Produto
+            </a>
+
+            <a href="#custos">
+                Custos
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            Projeto acadêmico — análise de marca e produto
+        </span>
+
+        <span>
+            NIKE • AIR FORCE 1
+        </span>
+
+    </div>
+
+
+    <p class="disclaimer">
+
+        Este projeto possui finalidade acadêmica e não representa
+        uma loja oficial da Nike. Valores apresentados são
+        estimativas utilizadas para fins de análise.
+
+    </p>
+
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
